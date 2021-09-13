@@ -14,11 +14,83 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #fff;
+  background-color: #31313b;
   font-family: sans-serif;
+  
 }
 
 img {
   max-width: 100%;
   height: auto;
+}
+.box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+ 
+}
+.wifi-sec {
+  display: none;
+}
+.wifi-sec [foo], .wifi-sec {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  margin-top: -150px;
+  transform: translate(-100px) rotate(-45deg);
+}
+
+.wifi {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 21px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-color: #fff;
+  border-width: 22px 22px 0 0;
+  border-radius: 0 100% 0 0;
+  opacity: 0;
+  border-style: solid;
+  animation: loaderwifi 2s infinite ease;
+}
+.one {
+  animation-delay: 0.8s;
+}
+.two {
+  width: 5em;
+  height: 5em;
+  animation-delay: 0.4s;
+}
+.there {
+  width: 60px;
+  height: 60px;
+}
+.four {
+  width: 20px;
+  height: 20px;
+  opacity: 1;
+  background-color: #fff;
+  animation: none;
+}
+
+
+@keyframes loaderwifi {
+  0% {
+      opacity: 0.5;
+ }
+  33% {
+      opactiy: 1;
+ }
+  66% {
+      opactiy: 0.5;
+ }
+  100% {
+      opactiy: 0.5;
+ }
 }
